@@ -1,25 +1,25 @@
 {
-  "name": "chore-meister",
+  "name": "chore-meister-admin",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/chore-meister/src",
-  "prefix": "cm-app",
+  "sourceRoot": "apps/chore-meister-admin/src",
+  "prefix": "cm-admin",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/chore-meister",
-        "index": "apps/chore-meister/src/index.html",
-        "main": "apps/chore-meister/src/main.ts",
+        "outputPath": "dist/apps/chore-meister-admin",
+        "index": "apps/chore-meister-admin/src/index.html",
+        "main": "apps/chore-meister-admin/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/chore-meister/tsconfig.app.json",
+        "tsConfig": "apps/chore-meister-admin/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/chore-meister/src/favicon.ico",
-          "apps/chore-meister/src/assets"
+          "apps/chore-meister-admin/src/favicon.ico",
+          "apps/chore-meister-admin/src/assets"
         ],
-        "styles": ["apps/chore-meister/src/styles.scss"],
+        "styles": ["apps/chore-meister-admin/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -53,18 +53,21 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "chore-meister:build:production"
+          "browserTarget": "chore-meister-admin:build:production"
         },
         "development": {
-          "browserTarget": "chore-meister:build:development"
+          "browserTarget": "chore-meister-admin:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4300
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "chore-meister:build"
+        "browserTarget": "chore-meister-admin:build"
       }
     },
     "lint": {
@@ -72,8 +75,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "apps/chore-meister/**/*.ts",
-          "apps/chore-meister/**/*.html"
+          "apps/chore-meister-admin/**/*.ts",
+          "apps/chore-meister-admin/**/*.html"
         ]
       }
     },
@@ -81,7 +84,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/chore-meister/jest.config.ts",
+        "jestConfig": "apps/chore-meister-admin/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -92,5 +95,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["chore-meister-admin"]
 }

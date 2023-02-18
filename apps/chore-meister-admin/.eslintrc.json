@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "cmApp",
+            "prefix": "cmAdmin",
             "style": "camelCase"
           }
         ],
@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "cm-app",
+            "prefix": "cm-admin",
             "style": "kebab-case"
           }
         ]

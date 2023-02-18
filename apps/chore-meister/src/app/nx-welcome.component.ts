@@ -1,10 +1,8 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/* eslint-disable */
-
 @Component({
-  selector: 'team-snar-chores-nx-welcome',
+  selector: 'cm-app-nx-welcome',
   standalone: true,
   imports: [CommonModule],
   template: `

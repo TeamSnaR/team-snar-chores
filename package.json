@@ -4,7 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "nx serve chore-meister"
+    "start": "nx serve chore-meister",
+    "build:apps": "nx run-many --targets=build --all --parallel=5"
   },
   "dependencies": {
     "@angular/animations": "~15.1.0",

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: true,
   imports: [NxWelcomeComponent, RouterModule],
-  selector: 'team-snar-chores-root',
+  selector: 'cm-app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
