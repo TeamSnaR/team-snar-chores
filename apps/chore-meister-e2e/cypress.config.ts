@@ -1,6 +1,28 @@
 import { defineConfig } from 'cypress';
-import { nxE2EPreset } from '@nrwl/cypress/plugins/cypress-preset';
+import * as createBundler from '@bahmutov/cypress-esbuild-preprocessor';
+import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor';
+import createEsbuildPlugin from '@badeball/cypress-cucumber-preprocessor/esbuild';
 
 export default defineConfig({
-  e2e: nxE2EPreset(__dirname),
+  e2e: {
+    specPattern: '**/*.feature',
+    async setupNodeEvents(
+      on: Cypress.PluginEvents,
+      config: Cypress.PluginConfigOptions
+    ): Promise<Cypress.PluginConfigOptions> {
+      // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
+      await addCucumberPreprocessorPlugin(on, config);
+
+      on(
+        'file:preprocessor',
+        createBundler({
+          plugins: [createEsbuildPlugin(config)],
+        })
+      );
+
+      // Make sure to return the config object as it might have been modified by the plugin.
+      return config;
+    },
+    supportFile: false, //'apps/chore-meister-e2e/src/support/e2e.ts',
+  },
 });

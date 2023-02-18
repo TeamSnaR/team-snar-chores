@@ -1,0 +1,6 @@
+{
+  "stepDefinitions": [
+    "src/e2e/[filepath]/**/*.ts",
+    "src/e2e/common-step-definitions/*.ts"
+  ]
+}

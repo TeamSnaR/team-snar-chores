@@ -6,9 +6,10 @@ import { ChoresStore } from './chores-store.service';
   standalone: true,
   imports: [CommonModule],
   template: `
+    <h2>Chores</h2>
     <ng-container *ngIf="choresStore.chores$ | async as chores">
       <div class="overflow-hidden bg-white shadow sm:rounded-md mt-12 mx-16">
-        <ul role="list" class="divide-y divide-gray-200">
+        <ul role="list" class="divide-y divide-gray-200" data-cy="chores-list">
           <li *ngFor="let chore of chores">
             <a href="#" class="block hover:bg-gray-50">
               <div class="px-4 py-4 sm:px-6">
