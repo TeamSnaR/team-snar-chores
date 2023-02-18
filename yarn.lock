@@ -2590,6 +2590,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ngrx/component-store@npm:^15.3.0":
+  version: 15.3.0
+  resolution: "@ngrx/component-store@npm:15.3.0"
+  dependencies:
+    tslib: ^2.0.0
+  peerDependencies:
+    "@angular/core": ^15.0.0
+    rxjs: ^6.5.3 || ^7.5.0
+  checksum: ccd58d32f688ee9ab0b88e85832f0ccb10a9df68b97a0bc7640cffc204cd4c319e9bd8fdb441dd78c9164fde6048f196e7eec2ce5334682474e47229533d950b
+  languageName: node
+  linkType: hard
+
 "@ngtools/webpack@npm:15.1.6":
   version: 15.1.6
   resolution: "@ngtools/webpack@npm:15.1.6"
@@ -12789,6 +12801,7 @@ __metadata:
     "@angular/platform-browser": ~15.1.0
     "@angular/platform-browser-dynamic": ~15.1.0
     "@angular/router": ~15.1.0
+    "@ngrx/component-store": ^15.3.0
     "@nrwl/angular": 15.7.2
     "@nrwl/cypress": 15.7.2
     "@nrwl/eslint-plugin-nx": 15.7.2
@@ -13161,7 +13174,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
+"tslib@npm:^2.0.0, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
